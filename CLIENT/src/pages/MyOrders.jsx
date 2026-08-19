@@ -10,7 +10,7 @@ function MyOrders() {
     const fetchOrders = async () => {
         try {
             const response = await axios.get(
-                "http://localhost:8080/api/myorders"
+                `${import.meta.env.VITE_SERVER}/api/myorders`
             );
 
             console.log(response.data);
