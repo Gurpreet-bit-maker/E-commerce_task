@@ -68,7 +68,7 @@ function Carts() {
             };
 
             const response = await axios.post(
-                "http://localhost:8080/api/orders",
+                `${import.meta.env.VITE_SERVER}/api/orders`,
                 orderData,
                 {
                     withCredentials: true,
