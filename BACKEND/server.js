@@ -9,7 +9,7 @@ import Order from "./productModel.js";
 connectDB();
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://e-commerce-task-peach.vercel.app",
     credentials: true,
   }),
 );
