@@ -59,7 +59,7 @@ function SIngleProduct({ products, searchValue }) {
             console.log("Single Order Data:", orderData);
 
             const res = await axios.post(
-                "http://localhost:8080/api/orders",
+                `${import.meta.env.VITE_SERVER}/api/orders`,
                 orderData,
                 {
                     withCredentials: true,
