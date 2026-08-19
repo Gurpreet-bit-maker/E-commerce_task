@@ -15,6 +15,7 @@ function Carts() {
         cartProducts,
         updateQuantity,
         removeFromCart,
+        clearCart,
     } = useContext(CartsContext);
 
     const [orderPlaced, setOrderPlaced] = useState(false);
@@ -80,9 +81,7 @@ function Carts() {
             setOrderPlaced(true);
 
             // Cart clear
-            cartProducts.forEach((item) => {
-                removeFromCart(item.id);
-            });
+            clearCart();
 
         } catch (error) {
             console.log(
